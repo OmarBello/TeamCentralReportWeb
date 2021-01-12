@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseñador Freelancer</title>
+    <script src="js/xlsx.full.min.js"></script>
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/tableexport.min.js"></script>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
@@ -12,11 +15,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous"> -->
+
 </head>
 
 <body>
     <header>
-        <h1 class="titulo">Reporte TeamMate Pendientes</span></h1>
+        <h1 class="titulo">Reporte TeamMate Pendientes</span>
+        </h1>
     </header>
 
     <div class="nav-bg">
@@ -28,22 +33,27 @@
         </nav>
     </div>
 
-    
 
-    <table  id="contenido" class="customers">
-			<tr>
-				<!-- The JSON downloaded from the URL above provides four attributes.-->
-				<th>Codigo</th>
-				<th>Proyecto</th>
-				<th>Titulo</th>
-				<th>Estado</th>
-			</tr>
-	</table>
+    <button id="btnExportarPendiente" class="button button1 container">Excel</button>
+
+    <table id="contenido" class="customers">
+        <tr>
+            <!-- The JSON downloaded from the URL above provides four attributes.-->
+            <th>PostID</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>body</th>
+        </tr>
+    </table>
 
 
-     <script src="js/jquery-3.5.1.min.js"></script>  
-    <scritp src="js/jquery-3.5.1.js"></script> 
-    <script src="js/script.js"></script>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <scritp src="js/jquery-3.5.1.js">
+        </script>
+        <script src="js/script.js"></script>
 </body>
 
 </html>
