@@ -35,40 +35,68 @@
 //     tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
 // });
 
-// Backup
-$(document).ready(function() {
-    $.getJSON("https://172.17.50.98:443/api/Recomendaciones/Pendiente",function(data) {
+$.getJSON("https://jsonplaceholder.typicode.com/comments",function(data) {
         console.log(data);
         var items = [];
-        for (var i = 0; i < data.sp.length; i++) {
-            items.push(data.sp[i]);
+        for (var i = 0; i < data.length; i++) {
+            items.push(data[i]);
         }
         var employee_data = '';
         $.each(items, function(key, value) {
             employee_data += '<tr>';
-            employee_data += '<td>' + value.codigo + '</td>';
-            employee_data += '<td>' + value.proyecto + '</td>';
-            employee_data += '<td>' + value.titulo + '</td>';
-            employee_data += '<td>' + value.estado + '</td>';
-            employee_data += '<td>' + value.fecha_Estimada + '</td>';
-            employee_data += '<td>' + value.categoria + '</td>';
-            employee_data += '<td>' + value.riesgo + '</td>';
-            employee_data += '<td>' + value.responsable + '</td>';
-            employee_data += '<td>' + value.estatus + '</td>';
-            employee_data += '<td>' + value.coordinador + '</td>';
-            employee_data += '<td>' + value.entidad + '</td>';
-            employee_data += '<td>' + value.atraso + '</td>';
-            employee_data += '<td>' + value.fecha_Envio + '</td>';
-            employee_data += '<td>' + value.dominio + '</td>';
-            employee_data += '</tr>';
-
-
-        });
+            employee_data += '<td>' + value.id + '</td>';
+            employee_data += '<td>' + value.name + '</td>';
+            employee_data += '<td>' + value.email + '</td>';
+            employee_data += '<td>' + value.body + '</td>';
+            employee_data += '<td>' + value.body + '</td>';
+            employee_data += '<td>' + value.id + '</td>';
+            employee_data += '<td>' + value.name + '</td>';
+            employee_data += '<td>' + value.email + '</td>';
+            employee_data += '<td>' + value.body + '</td>';
+            employee_data += '<td>' + value.body + '</td>';
+            employee_data += '<td>' + value.id + '</td>';
+            employee_data += '<td>' + value.name + '</td>';
+            employee_data += '<td>' + value.email + '</td>';
+            employee_data += '<td>' + value.body + '</td>';
+                    });
         $('#contenido').append(employee_data);
 
     });
 
-});
+// Backup
+// $(document).ready(function() {
+//     $.getJSON("https://172.17.50.98:443/api/Recomendaciones/Pendiente",function(data) {
+//         console.log(data);
+//         var items = [];
+//         for (var i = 0; i < data.sp.length; i++) {
+//             items.push(data.sp[i]);
+//         }
+//         var employee_data = '';
+//         $.each(items, function(key, value) {
+//             employee_data += '<tr>';
+//             employee_data += '<td>' + value.codigo + '</td>';
+//             employee_data += '<td>' + value.proyecto + '</td>';
+//             employee_data += '<td>' + value.titulo + '</td>';
+//             employee_data += '<td>' + value.estado + '</td>';
+//             employee_data += '<td>' + value.fecha_Estimada + '</td>';
+//             employee_data += '<td>' + value.categoria + '</td>';
+//             employee_data += '<td>' + value.riesgo + '</td>';
+//             employee_data += '<td>' + value.responsable + '</td>';
+//             employee_data += '<td>' + value.estatus + '</td>';
+//             employee_data += '<td>' + value.coordinador + '</td>';
+//             employee_data += '<td>' + value.entidad + '</td>';
+//             employee_data += '<td>' + value.atraso + '</td>';
+//             employee_data += '<td>' + value.fecha_Envio + '</td>';
+//             employee_data += '<td>' + value.dominio + '</td>';
+//             employee_data += '</tr>';
+
+
+//         });
+//         $('#contenido').append(employee_data);
+
+//     });
+
+// });
 // $("#btnExport").click(function(e) {
 
 //     window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').innerHTML()));
