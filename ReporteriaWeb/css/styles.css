@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Krub', sans-serif;
+    
 }
 
 .titulo {
@@ -27,7 +28,7 @@ body {
 .navegacion-principal {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .navegacion-principal a {
