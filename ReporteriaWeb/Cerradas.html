@@ -21,27 +21,32 @@
         <nav class="navegacion-principal contenedor">
             <a href="index.html">Pendientes</a>
             <a href="Detenidas.html">Detenidas</a>
-            <a href="Cerradas.html">Cerradas</a>
             <a href="Implementadas.html">Implementadas</a>
-    </nav>
+            <a href="Cerradas.html">Cerradas</a>
+      </nav>
+    </div>
+
+    <div class="container">
+        <button id="btnExport" class="button button1">Export To Excel File</button>
+    </div>
+    <div id="dvData">
+        <table id="contenido" class="customers">
+            <tr>
+                <!-- The JSON downloaded from the URL above provides four attributes.-->
+                <th>Codigo</th>
+                <th>Proyecto</th>
+                <th>Titulo</th>
+                <th>Estado</th>
+                <th>Catgoria</th>
+                <th>Riesgo</th>
+                <th>Coordinador</th>
+                <th>Responsable</th>
+                <th>Entidad</th>
+                <th>Fecha Envio</th>
+            </tr> 
+        </table>
     </div>
     
-
-    <table id="contenido" class="customers">
-        <tr>
-            <!-- The JSON downloaded from the URL above provides four attributes.-->
-            <th>Codigo</th>
-            <th>Proyecto</th>
-            <th>Titulo</th>
-            <th>Estado</th>
-            <th>Catgoria</th>
-            <th>Riesgo</th>
-            <th>Coordinador</th>
-            <th>Responsable</th>
-            <th>Entidad</th>
-            <th>Fecha Envio</th>
-        </tr> 
-    </table>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <scritp src="js/jquery-3.5.1.js"></script>
