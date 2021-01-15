@@ -13,10 +13,9 @@
     <link rel="shortcut icon" href="img/Image_2@2x.png">
 
 </head>
-
+<!--El Index.html guarda la informacion de las Recomendaciones Pendientes-->
 <body>
     <header>
-
         <img src="img/logoBHD.png" alt="Logo BHD" class="logo">
         <div>
             <nav>
@@ -31,34 +30,36 @@
         </div>
         <div class="clearfix"></div>
     </header>
-    <h1 class="titulo"><span>TeamMate Cerradas</span> </h1>
 
+    <!--Generamos el boton y la tabla con la data del API-->
+    <section>
+        <div class="container">
+            <button id="btnExport" class="button button1 rounded-pill">Excel</button>
+        </div>
+        <div id="dvData">
+            <table id="contenido" class="customers table table-hover">
+                <tr>
 
-    <div class="container titulo">
-        <button id="btnExport" class="button button1 rounded-pill">Excel</button>
-    </div>
+                    <th>Código</th>
+                    <th>Proyecto</th>
+                    <th>Título</th>
+                    <th>Estado</th>
+                    <th>Fecha Estimado</th>
+                    <th>Catgoría</th>
+                    <th>Riesgo</th>
+                    <th>Responsable</th>
+                    <th>Estatus</th>
+                    <th>Coordinador</th>
+                    <th>Entidad</th>
+                    <th>Atraso</th>
+                    <th>Fecha Envío</th>
+                    <th>Dominio</th>
+                </tr>
+            </table>
+        </div>
 
-    <div id="dvData">
-        <table id="contenido" class="customers table table-hover">
-            <tr>
-                <!-- The JSON downloaded from the URL above provides four attributes.-->
-                <th>Código</th>
-                <th>Proyecto</th>
-                <th>Título</th>
-                <th>Estado</th>
-                <th>Fecha Estimado</th>
-                <th>Catgoria</th>
-                <th>Riesgo</th>
-                <th>Responsable</th>
-                <th>Estatus</th>
-                <th>Coordinador</th>
-                <th>Entidad</th>
-                <th>Atraso</th>
-                <th>Fecha Envio</th>
-                <th>Dominio</th>
-            </tr>
-        </table>
-    </div>
+    </section>
+
 
 
 

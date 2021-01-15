@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
     <link rel="shortcut icon" href="img/Image_2@2x.png">
 </head>
-
+<!--El Cerradas.html guarda la informacion de las Recomendaciones Cerradas-->
 <body>
     <header>
 
@@ -31,33 +31,33 @@
         </div>
         <div class="clearfix"></div>
     </header>
-    <h1 class="titulo">Reporte TeamMate Cerradas</span></h1>
 
+    <section>
+        <div class="container">
+            <button id="btnExport" class="button button1 rounded-pill">Excel</button>
+        </div>
+        <div id="dvData">
+            <table id="contenido" class="customers table table-hover">
+                <tr>
+                    <th>Código</th>
+                    <th>Proyecto</th>
+                    <th>Título</th>
+                    <th>Estado</th>
+                    <th>Catgoría</th>
+                    <th>Riesgo</th>
+                    <th>Coordinador</th>
+                    <th>Responsable</th>
+                    <th>Entidad</th>
+                    <th>Fecha Envío</th>
+                </tr>
+            </table>
+        </div>
 
-    <div class="container">
-        <button id="btnExport" class="button button1 rounded-pill">Excel</button>
-    </div>
-    <div id="dvData">
-        <table id="contenido" class="customers table table-hover">
-            <tr>
-                <!-- The JSON downloaded from the URL above provides four attributes.-->
-                <th>Codigo</th>
-                <th>Proyecto</th>
-                <th>Titulo</th>
-                <th>Estado</th>
-                <th>Catgoria</th>
-                <th>Riesgo</th>
-                <th>Coordinador</th>
-                <th>Responsable</th>
-                <th>Entidad</th>
-                <th>Fecha Envio</th>
-            </tr> 
-        </table>
-    </div>
-    
+    </section>
 
     <script src="js/jquery-3.5.1.min.js"></script>
-    <scritp src="js/jquery-3.5.1.js"></script>
+    <scritp src="js/jquery-3.5.1.js">
+        </script>
         <script src="js/scriptCerrada.js"></script>
 </body>
 
