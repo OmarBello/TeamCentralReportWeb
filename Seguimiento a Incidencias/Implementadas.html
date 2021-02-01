@@ -7,31 +7,32 @@
     <title>Team Central</title>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
     <link rel="shortcut icon" href="img/Image_2@2x.png">
-
 </head>
-<!--El Index.html guarda la informacion de las Recomendaciones Pendientes-->
+<!--El Implementadas.html guarda la informacion de las Recomendaciones Implementadas-->
 <body>
     <header>
+
         <img src="img/logoBHD.png" alt="Logo BHD" class="logo">
         <div>
-            <nav>
+            <nav id="menu-toogle">
                 <ul class="nav">
-                    <li><a class="current" href="indexPendiente.html">Pendientes</a></li>
+                    <li><a class="" href="indexPendiente.html">Pendientes</a></li>
                     <li><a class=" " href="Detenidas.html">Detenidas</a></li>
-                    <li><a class=" " href="Implementadas.html">Implementadas</a></li>
+                    <li><a class="current" href="Implementadas.html">Implementadas</a></li>
                     <li><a class=" " href="Cerradas.html">Cerradas</a></li>
                     <li><a class="" href="Detalle.html">Detalle Recomendaciones</a></li>
+                    <li><a class="" href="incidencias.html">Incidencias</a></li>
                 </ul>
             </nav>
         </div>
         <div class="clearfix"></div>
     </header>
 
-    <!--Generamos el boton y la tabla con la data del API-->
     <section>
         <div class="container">
             <button id="btnExport" class="button button1 rounded-pill">Excel</button>
@@ -39,33 +40,30 @@
         <div id="dvData">
             <table id="contenido" class="customers table table-hover">
                 <tr>
-
+                    <!-- The JSON downloaded from the URL above provides four attributes.-->
                     <th>Código</th>
                     <th>Proyecto</th>
                     <th>Título</th>
                     <th>Estado</th>
-                    <th>Fecha Estimado</th>
                     <th>Catgoría</th>
-                    <th>Riesgo</th>
                     <th>Responsable</th>
+                    <th>Riesgo</th>
                     <th>Estatus</th>
                     <th>Coordinador</th>
                     <th>Entidad</th>
-                    <th>Atraso</th>
+                    <th>Fecha Notificación</th>
+                    <th>Dias Transcurridos</th>
                     <th>Fecha Envío</th>
-                    <th>Dominio</th>
                 </tr>
             </table>
         </div>
 
     </section>
 
-
-
-
     <script src="js/jquery-3.5.1.min.js"></script>
-    <scritp src="js/jquery-3.5.1.js"></script>
-        <script src="js/scriptPendiente.js"></script>
+    <scritp src="js/jquery-3.5.1.js">
+        </script>
+        <script src="js/scriptImplementadas.js"></script>
 
 </body>
 
