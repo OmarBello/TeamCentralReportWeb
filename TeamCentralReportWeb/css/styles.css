@@ -214,3 +214,8 @@ nav ul li a:hover{
 .btn-succes{
   margin-top: 15px;
 }
+
+.circleChart{
+  width: 400px;
+  height: 400px;
+}
