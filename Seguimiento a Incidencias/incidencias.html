@@ -64,7 +64,7 @@
                 <option value="TESORERIA">TESORERIA</option>
             </select>
 
-            
+
             <div id="chIncidencias" class="incidenciasopciones">
                 <label>Opciones del reporte:</label>
                 <div class="form-check">
@@ -93,10 +93,56 @@
                     </label>
                 </div>
             </div>
-            
-            <a href="DatosIncidencias.html" target="_blank"><input id="btnVisualizar" type="button" value="Visualizar" class="btn btn-outline-success btn-succes"></a>
+
+            <input id="btnVisualizar" type="button" value="Visualizar" class="btn btn-outline-success btn-succes">
         </form>
     </section>
+
+    <Main>
+        <table class="table table-striped">
+            <thead>
+                <tr class="tbIncidencias">
+                    <th>Tipo de Recomendaciones</th>
+                    <th>Alto</th>
+                    <th>Moderado</th>
+                    <th>Medio</th>
+                    <th>Bajo</th>
+                </tr>
+            </thead>
+            <tbody id="Principal">
+
+            </tbody>
+            <tbody id="Secundario">
+
+            </tbody>
+        </table>
+
+        <table class="table table-striped">
+            <thead>
+                <tr class="tbIncidenciasCompleto">
+                    <th>Nombre Proyecto <br>Tipo de Recomendaciones</th>
+                    <th>Riesgo</th>
+                    <th>Categoria</th>
+                    <th>Responsable</th>
+                    <th>Fecha Implementadas</th>
+                    <th>Dia de Atraso</th>
+                </tr>
+            </thead>
+            <tbody id="Principal">
+
+            </tbody>
+            <tbody id="Secundario">
+
+            </tbody>
+        </table>
+    </Main>
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <scritp src="js/jquery-3.5.1.js">
+        </script>
+        <script src="js/scriptIncidencias.js"></script>
 </body>
 
 </html>
