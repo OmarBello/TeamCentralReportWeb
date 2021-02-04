@@ -65,7 +65,7 @@
 
 // Backup
 $(document).ready(function() {
-    $.getJSON("https://172.17.50.98:443/api/Recomendaciones/Pendiente",function(data) {
+    $.getJSON("https://localhost:44372/api/Recomendaciones/Pendiente",function(data) {
         console.log(data);
         var items = [];
         for (var i = 0; i < data.sp.length; i++) {

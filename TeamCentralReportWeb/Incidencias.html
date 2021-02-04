@@ -34,16 +34,15 @@
     </header>
 
 
+   
 
     <section id="slcIncidencias" class="container">
-
-    
-        <form class="incidencias">
-
+        <div class="incidencias">
+            
             <div class="titulo-incidencias">
                 <h2>Seleccione la unidad y luego el boton Visualizar</h2>
             </div>
-            <select id="Incidencias" class="custom-select">
+            <select id="selectNombre" name="selectNombre" class="custom-select">
                 <option value="ADMINISTRACION Y FINANZAS" selected>ADMINISTRACION Y FINANZAS</option>
                 <option value="AFI">AFI</option>
                 <option value="AFP SIEMBRA">AFP SIEMBRA</option>
@@ -66,45 +65,32 @@
                 <option value="TESORERIA">TESORERIA</option>
             </select>
 
-
-            <div id="chIncidencias" class="incidenciasopciones">
-                <label>Opciones del reporte:</label>
+            <div class="incidenciasopciones">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Incidencias Vencidas
+                    <input type="radio" name="radioIncidencia" class="form-check-input"  value="Vencidas" />
+                    <label for="radioIncidencia" class="form-check-label">
+                        Vencidas
                     </label>
+                   
                 </div>
-
+    
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Incidencias por Vencer
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-                    <label class="form-check-label" for="flexRadioDefault3">
-                        Gerencia Incidencias Vencidas
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
-                    <label class="form-check-label" for="flexRadioDefault4">
-                        Gerencia Incidencias por Vencer
-                    </label>
-                </div>
+                <input type="radio" name="radioIncidencia" class="form-check-input" value="Por vencer" />
+                <label for="radioIncidencia" class="form-check-label">
+    
+                    Por vencer
+                </label>
             </div>
+                
+                <button class="btn btn-outline-success btn-succes" type="submit" onclick="TraerData();">Verificar</button>
+            </div>
+            
+   
+        </section>
 
-            <input id="btnVisualizar" type="button" value="Visualizar" class="btn btn-outline-success btn-succes">
-        </form>
-    </section>
-
-    <Main>
-        <canvas id="chart" class="circleChart"></canvas>
-        <table class="table table-striped">
+        <table class="table">
             <thead>
-                <tr class="tbIncidencias">
+                <tr>
                     <th>Tipo de Recomendaciones</th>
                     <th>Alto</th>
                     <th>Moderado</th>
@@ -112,39 +98,17 @@
                     <th>Bajo</th>
                 </tr>
             </thead>
-            <tbody id="Principal">
-
-            </tbody>
-            <tbody id="Secundario">
-
+        
+            <tbody id="tableBody">
             </tbody>
         </table>
 
-        <table class="table table-striped">
-            <thead>
-                <tr class="tbIncidenciasCompleto">
-                    <th>Nombre Proyecto <br>Tipo de Recomendaciones</th>
-                    <th>Riesgo</th>
-                    <th>Categoria</th>
-                    <th>Responsable</th>
-                    <th>Fecha Implementadas</th>
-                    <th>Dia de Atraso</th>
-                </tr>
-            </thead>
-            <tbody id="Principal">
-
-            </tbody>
-            <tbody id="Secundario">
-
-            </tbody>
-        </table>
-    </Main>
 
 
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <scritp src="js/jquery-3.5.1.js"></script>
-    <script src="js/scriptIncidencias.js"></script>
+    <script src="js/scriptIncidencia.js"></script>
     <script src="js/Chart.min.js"></script>
 </body>
 
