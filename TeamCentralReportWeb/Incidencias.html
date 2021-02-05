@@ -40,7 +40,7 @@
         <div class="incidencias">
             
             <div class="titulo-incidencias">
-                <h2>Seleccione la unidad y luego el boton Visualizar</h2>
+                <h2>Seleccione las opciones y luego click al boton Visualizar</h2>
             </div>
             <select id="selectNombre" name="selectNombre" class="custom-select">
                 <option value="ADMINISTRACION Y FINANZAS" selected>ADMINISTRACION Y FINANZAS</option>
@@ -48,13 +48,13 @@
                 <option value="AFP SIEMBRA">AFP SIEMBRA</option>
                 <option value="BANCA EMPRESAS">BANCA EMPRESAS</option>
                 <option value="BANCA PERSONA">BANCA PERSONA</option>
-                <option value="BANCA TRANSACCIONAL">BANCA TRANSACCIONAL</option>
-                <option value="BHD INTERNATIONAL BANK">BHD INTERNATIONAL BANK</option>
+                <option value="Banca Transaccional">BANCA TRANSACCIONAL</option>
+                <option value="BHD International Bank">BHD INTERNATIONAL BANK</option>
                 <option value="EXPERIENCIA Y MEJORA CONTINUA">EXPERIENCIA Y MEJORA CONTINUA</option>
                 <option value="FABRICA DE OPERACIONES">FABRICA DE OPERACIONES</option>
                 <option value="FIDUCIARIA">FIDUCIARIA</option>
                 <option value="GESTION DE RIESGO">GESTION DE RIESGO</option>
-                <option value="GESTION DEL TALENTO">GESTION DEL TALENTO</option>
+                <option value="Gestión del Talento">GESTION DEL TALENTO</option>
                 <option value="MERCADEO Y PUBLICIDAD">MERCADEO Y PUBLICIDAD</option>
                 <option value="MIRED">MIRED</option>
                 <option value="OPERACIONES Y SERVICIOS">OPERACIONES Y SERVICIOS</option>
@@ -67,41 +67,63 @@
 
             <div class="incidenciasopciones">
                 <div class="form-check">
-                    <input type="radio" name="radioIncidencia" class="form-check-input"  value="Vencidas" />
+                    <input type="radio" name="radioIncidencia" class="form-check-input"  value="Vencida" />
                     <label for="radioIncidencia" class="form-check-label">
-                        Vencidas
+                        Vencida
                     </label>
                    
                 </div>
     
                 <div class="form-check">
-                <input type="radio" name="radioIncidencia" class="form-check-input" value="Por vencer" />
+                <input type="radio" name="radioIncidencia" class="form-check-input" value="Por Vencer" />
                 <label for="radioIncidencia" class="form-check-label">
     
-                    Por vencer
+                    Por Vencer
                 </label>
             </div>
                 
-                <button class="btn btn-outline-success btn-succes" type="submit" onclick="TraerData();">Verificar</button>
+                <button class="btn btn-outline-success btn-succes" type="submit" onclick="TraerData();">Visualizar</button>
             </div>
             
    
         </section>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Tipo de Recomendaciones</th>
-                    <th>Alto</th>
-                    <th>Moderado</th>
-                    <th>Medio</th>
-                    <th>Bajo</th>
-                </tr>
-            </thead>
-        
-            <tbody id="tableBody">
-            </tbody>
-        </table>
+        <section>
+            
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Tipo de Recomendaciones</th>
+                        <th>Alto</th>
+                        <th>Moderado</th>
+                        <th>Medio</th>
+                        <th>Bajo</th>
+                    </tr>
+                </thead>
+            
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+    
+            <table class="table table-hover tableSecundario">
+                <thead>
+                    <tr>
+                        <th>Nombre Proyecto <br/><spam>Tipo de Recomendaciones</spam></th>
+                        <th>Riesgo</th>
+                        <th>Categoría</th>
+                        <th>Responsable</th>
+                        <th>Fecha Imp.</th>
+                        <th>Día de Atraso</th>
+                    </tr>
+                </thead>
+            
+                <tbody id="tablebodySecundario">
+                </tbody>
+            </table>
+    
+        </section>
+
+       
 
 
 
