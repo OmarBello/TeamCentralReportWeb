@@ -205,6 +205,7 @@ nav ul li a:hover{
   margin-top: 100px;
   border: none;
   border-radius: 4px;
+  margin-bottom: 144px
 }
 
 .incidenciasopciones{
@@ -222,4 +223,33 @@ nav ul li a:hover{
 
 .tableSecundario{
   margin-top: 100px;
+}
+
+.FechaActual{
+  float: right;
+  margin-bottom: 60px;
+  margin-right: 80px;
+  font-weight: bold;
+}
+.TituloPricipalIncidencia{
+  padding: 50px;
+  margin-bottom: -37px;
+  font-weight: bold;
+}
+.tituloIncidencia{
+  margin-left: 201px;
+  font-weight: bold;
+}
+.estatusMover{
+  margin: -40px -8px 16px 405px;
+}
+
+.tituloIncidencia2{
+  margin-left: 97px;
+  font-weight: bold;
+}
+.cantidadIncidencia{
+  margin-left: 778px;
+  margin-bottom: 50px;
+  font-weight: bold;
 }

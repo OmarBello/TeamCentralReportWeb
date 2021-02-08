@@ -9,12 +9,17 @@ function TraerData() {
         success: function (data) {
             FillTable(data);
             console.log(data);
+            document.getElementById('Estatus').innerHTML = estatus;
+            document.getElementById('TituloIncidencia').innerHTML = entidad;
+        
         }
     });
 
 }
 
 function FillTable(data){
+    document.getElementById('tableBody').innerHTML = '';
+    document.getElementById('tablebodySecundario').innerHTML = '';
     console.log(data);
     for (var i = 0; i < data.sp.length; i++){
         var row = "<tr>";
@@ -47,6 +52,8 @@ function FillTable(data){
         row += "</tr>";
 
         $("#tableBody").append(row);
+        document.getElementById('CantidadIncidencia').innerHTML = data.sp.length;
+     
     }
 
     for (var i = 0; i < data.sp.length; i++){
@@ -60,35 +67,45 @@ function FillTable(data){
         row += "</tr>";
 
         $("#tablebodySecundario").append(row);
+       
     }
+    
 }
 
-// function TraerData() {
-//     $(document).ready(function() {
-//         var entidad = $("#selectNombre :selected").val();
-//         var estatus = $("input[name=radioIncidencia]:checked").val();
-    
-//         $.getJSON("https://localhost:44372/api/Recomendaciones/GetAllIncidencia?entidad="+entidad+"&estatus="+estatus,function(data) {
-//             console.log(data);
-//             var items = [];
-//             for (var i = 0; i < data.sp.length; i++) {
-//                 items.push(data.sp[i]);
-//             }
-//             var employee_data = '';
-//             $.each(items, function(key, value) {
-//                 employee_data += '<tr>';
-//                 employee_data += "<td>" + data.sp[i].codigo + + data.sp[i].proyecto +"<br />" + data.sp[i].categoria +"</td>";
-//                 employee_data += '</tr>';
-    
-    
-//             });
-//             $('#tableBody').append(employee_data);
-    
-//         });
-    
-//     });
-// }
+
+////////////////////////////////////////////////////////////////////////////////
+//Fecha Actual
+
+    let fecha = new Date();
+    let mes = fecha.getMonth();
+    let diaMes = fecha.getDate();
+    let diaSemana = fecha.getDay();
+    let anio = fecha.getFullYear();
 
 
+    let momentoActual = new Date();
+    let hora = momentoActual.getHours();
+    let minuto = momentoActual.getMinutes();
+    let segundo = momentoActual.getSeconds();
+    let prepend = hora >=12? "PM":"AM";
 
+    let dias = new
+    Array('Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sábado');
+       
+    let meses = new 
+    Array('Enero','Febrero', 'Marzo','Abril','Mayo','Junio','Julio','Agosto',
+            'Septiembre','Octubre','Noviembre','Diciembre');  
+    let fechaImprible =  (dias[diaSemana] + ", " + diaMes + " de " + meses[mes] + " de " + anio);
 
+    document.getElementById('fechaDocumento').innerHTML = fechaImprible;
+
+    let horaImprimible = hora + " : " + minuto + " : " + segundo + prepend;
+
+    //salida
+    document.getElementById('horaDocumento').innerHTML = horaImprimible;
+
+  
+
+  
+
+////////////////////////////////////////////////////////////////////////////////

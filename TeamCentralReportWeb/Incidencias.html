@@ -82,15 +82,41 @@
                 </label>
             </div>
                 
-                <button class="btn btn-outline-success btn-succes" type="submit" onclick="TraerData();">Visualizar</button>
+                <button id="btn-visualizar" class="btn btn-outline-success btn-succes" type="submit" onclick="TraerData();">Visualizar</button>
             </div>
             
    
         </section>
 
         <section>
-            
-            <table class="table table-hover">
+            <!-- <button type="button" class="btn btn-danger">PDF</button> -->
+            <div>
+               
+                <div class="FechaActual">
+                    <Strong>
+                        <p id="fechaDocumento"></p>
+                        <p id="horaDocumento"></p><div id="lblTime"></div>
+                    </Strong>
+                </div>
+              
+            </div>
+
+            <div class="TituloPricipalIncidencia">
+           
+                    <p class="tituloIncidencia">Reporte Recomendaciones</p><p  id="Estatus" class="estatusMover"></p>
+           
+            </div>
+           
+           <div class="tituloIncidencia2">
+               <h3 id="TituloIncidencia"></h3>
+              
+           </div>
+
+           
+            <p class="cantidadIncidencia">Total Recomendaciones: <span id="CantidadIncidencia"></span></p>
+           
+           
+            <table class="table table-hover" id="table-principal">
                 <thead>
                     <tr>
                         <th>Tipo de Recomendaciones</th>
@@ -105,7 +131,7 @@
                 </tbody>
             </table>
     
-            <table class="table table-hover tableSecundario">
+            <table id="table-secundario" class="table table-hover tableSecundario">
                 <thead>
                     <tr>
                         <th>Nombre Proyecto <br/><spam>Tipo de Recomendaciones</spam></th>
