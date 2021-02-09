@@ -222,7 +222,7 @@ nav ul li a:hover{
 }
 
 .tableSecundario{
-  margin-top: 100px;
+  margin-top: 34px;
 }
 
 .FechaActual{
@@ -250,6 +250,33 @@ nav ul li a:hover{
 }
 .cantidadIncidencia{
   margin-left: 778px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.Mover-chart{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: -208px;
+}
+.Container{
+  height: 100vh;
+}
+
+.chart-wrapper{
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.btn-exportdata{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.footer{
   font-weight: bold;
 }
