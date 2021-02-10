@@ -223,14 +223,6 @@ nav ul li a:hover{
     height: 400px;
 }
 
-.tablePrimario {
-    page-break-before: always;
-}
-
-.tableSecundario {
-    margin-top: 34px;
-    page-break-before: always;
-}
 
 .FechaActual {
     float: right;
@@ -269,7 +261,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    margin-bottom: -208px;
+    margin-bottom: -252px;
 }
 
 .Container {
@@ -293,6 +285,11 @@ nav ul li a:hover{
     font-weight: bold;
 }
 
-.textAling {
-    text-align: center;
+
+.tablaIncidencia{
+    page-break-before: always;
+}
+
+.Esconder{
+    visibility: hidden;
 }

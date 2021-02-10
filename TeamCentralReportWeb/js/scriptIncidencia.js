@@ -1,3 +1,10 @@
+let Alto = 0;
+let Moderado = 0;
+let Medio = 0;
+let Bajo = 0;
+let Debilidad = 0;
+let Incumplimiento = 0;
+
 function TraerData() {
     var entidad = $("#selectNombre :selected").val();
     var estatus = $("input[name=radioIncidencia]:checked").val();
@@ -21,6 +28,14 @@ function TraerDataRefresh(){
 }
 
 function FillTable(data){
+     Alto = 0;
+     Moderado = 0;
+     Medio = 0;
+     Bajo = 0;
+     Debilidad = 0;
+     Incumplimiento = 0;
+
+
     document.getElementById('tableBody').innerHTML = '';
     document.getElementById('tablebodySecundario').innerHTML = '';
     console.log(data);
@@ -32,25 +47,34 @@ function FillTable(data){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
+
+            Alto++;
         }
         else if(data.sp[i].riesgo == "Moderado (3)"){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 1 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
+
+            Moderado++;
         }
         else if(data.sp[i].riesgo == "Medio (2)"){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 1 + "</td>";
             row += "<td>" + 0 + "</td>";
+
+            Medio++;
         }
         else if(data.sp[i].riesgo == "Bajo (1)"){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 1 + "</td>";
+
+            Bajo++;
         }
+
 
         row += "</tr>";
 
@@ -72,7 +96,44 @@ function FillTable(data){
         $("#tablebodySecundario").append(row);
        
     }
-   
+
+    for (var i = 0; i < data.sp.length; i++){
+        var row = "<tr>";
+        row += "<td><strong>" + data.sp[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> ";
+        if(data.sp[i].categoria == "Debilidad de Control ( DC )"){
+            row += "<td>" + 1 + "</td>";
+            row += "<td>" + 0 + "</td>";
+            Debilidad++;
+            
+        }
+        else if(data.sp[i].categoria == "Incumplimiento ( I )"){
+            row += "<td>" + 0 + "</td>";
+            row += "<td>" + 1 + "</td>";
+            Incumplimiento++;
+        }
+        $("#tableBodyPrueba").append(row);
+    }
+        
+
+    myChart.data.datasets[0].data.pop();
+    myChart.data.datasets[0].data.pop();
+    myChart.data.datasets[0].data.pop();
+    myChart.data.datasets[0].data.pop();
+
+    myChart.data.datasets[0].data[0] = Alto;
+    myChart.data.datasets[0].data[1] = Moderado;
+    myChart.data.datasets[0].data[2] = Medio;
+    myChart.data.datasets[0].data[3] = Bajo;
+
+
+    myChart2.data.datasets[0].data.pop();
+    myChart2.data.datasets[0].data.pop();
+
+    myChart2.data.datasets[0].data[0] = Debilidad;
+    myChart2.data.datasets[0].data[1] = Incumplimiento;
+
+    myChart.update();
+    myChart2.update();
 }
 
 
@@ -112,29 +173,59 @@ function FillTable(data){
   
 
 ////////////////////////////////////////////////////////////////////////////////
+
 var ctx = document.getElementById('myChartRiesgo').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Alto', 'Moderado', 'Medio', 'Bajo'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Riesgo',
+            data: [Alto, Moderado, Medio, Bajo],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
+                'red',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'red',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+        
+    }
+    
+});
+
+
+var ctx = document.getElementById('myChartIncidencia').getContext('2d');
+var myChart2 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Debilidad de Control (DB)', 'Incumplimiento (I)'],
+        datasets: [{
+            label: 'Categoria',
+            data: [Debilidad,Incumplimiento],
+            backgroundColor: [
+                'red',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderColor: [
+                'red',
+                'rgba(255, 206, 86, 1)',
             ],
             borderWidth: 1
         }]
@@ -150,43 +241,6 @@ var myChart = new Chart(ctx, {
     }
 });
 
-var ctx = document.getElementById('myChartIncidencia').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
 
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -224,18 +278,27 @@ $(document).ready(function() {
     });
 });
 
-window.onload = function(){
-    document.getElementById("btn-PDF")
-    .addEventListener("click",()=>{
-        const invoice = this.document.getElementById("ExportarData");
-        console.log(invoice);
-        console.log(window);
-        var opt = {
-            filename: 'Incidencia.pdf',
-            image: { type: 'jpeg', quality: 5 },
-            html2canvas: { scale: 3 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
-            };
-            html2pdf().from(invoice).set(opt).save();
-    })
-}
+// window.onload = function(){
+//     document.getElementById("btn-PDF")
+//     .addEventListener("click",()=>{
+//         const invoice = this.document.getElementById("ExportarData");
+//         console.log(invoice);
+//         console.log(window);
+//         var opt = {
+//             filename: 'Incidencia.pdf',
+//             image: { type: 'jpeg', quality: 600 },
+//             html2canvas: { scale: 3 },
+//             jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+//             };
+//             html2pdf().from(invoice).set(opt).save();
+//     })
+// }
+ 
+// $("#btn-PDF").live("click", function(){
+//     var printDoc = new jsPDF();
+//     printDoc.fromHTML($('#ExportarData').get(0),10,10,{
+//         'width':180
+//     });
+//     printDoc.autoPrint();
+//     printDoc.output("Incidencia");
+// });

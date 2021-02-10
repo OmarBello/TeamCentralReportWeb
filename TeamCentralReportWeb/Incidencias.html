@@ -151,43 +151,60 @@
         <div>
 
         </div>
-        <table class="table table-hover tablePrimario" id="table-principal">
-            <thead>
-                <tr>
-                    <th>Tipo de Recomendaciones</th>
-                    <th class="textAling">Alto</th>
-                    <th class="textAling">Moderado</th>
-                    <th class="textAling">Medio</th>
-                    <th class="textAling">Bajo</th>
-                </tr>
-            </thead>
 
-            <tbody id="tableBody">
-            </tbody>
-        </table>
 
-        <table id="table-secundario" class="table table-hover tableSecundario">
-            <thead>
-                <tr>
-                    <th>Nombre Proyecto <br />
-                        <spam>Tipo de Recomendaciones</spam>
-                    </th>
-                    <th>Riesgo</th>
-                    <th>Categoría</th>
-                    <th>Responsable</th>
-                    <th>Fecha Imp.</th>
-                    <th>Día de Atraso</th>
-                </tr>
-            </thead>
+        <div>
+            <table class="table table-hover tablePrimario tablaIncidencia" id="table-principal">
+                <thead>
+                    <tr>
+                        <th>Tipo de Recomendaciones</th>
+                        <th>Alto</th>
+                        <th>Moderado</th>
+                        <th>Medio</th>
+                        <th>Bajo</th>
+                    </tr>
+                </thead >
+    
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+    
+            <table id="table-secundario" class="table table-hover tableSecundario tablaIncidencia">
+                <thead>
+                    <tr>
+                        <th>Nombre Proyecto <br />
+                            <spam>Tipo de Recomendaciones</spam>
+                        </th>
+                        <th>Riesgo</th>
+                        <th>Categoría</th>
+                        <th>Responsable</th>
+                        <th>Fecha Imp.</th>
+                        <th>Día de Atraso</th>
+                    </tr>
+                </thead>
+    
+                <tbody id="tablebodySecundario">
+                </tbody>
+            </table>
 
-            <tbody id="tablebodySecundario">
-            </tbody>
-        </table>
+        </div>
+       
     </section>
 
 
 
+    <table class="Esconder">
+        <thead>
+            <tr>
+                <th>Tipo de Recomendaciones</th>
+                <th class="textAling">Debilidad</th>
+                <th class="textAling">Incumplimiento</th>
+            </tr>
+        </thead >
 
+        <tbody id="tableBodyPrueba">
+        </tbody>
+    </table>
 
 
 
@@ -195,8 +212,8 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <scritp src="js/jquery-3.5.1.js">
         </script>
-        <script src="js/jspdf.min.js"></script>
-        <script src="js/html2pdf.bundle.js"></script>
+         <script src="js/jspdf.min.js"></script>
+        <script src="js/html2pdf.bundle.js"></script> 
         <script src="js/Chart.min.js"></script>
 
 
