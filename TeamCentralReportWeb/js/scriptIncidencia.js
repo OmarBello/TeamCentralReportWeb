@@ -41,7 +41,7 @@ function FillTable(data){
     console.log(data);
     for (var i = 0; i < data.sp.length; i++){
         var row = "<tr>";
-        row += "<td><strong>" + data.sp[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> <br /> <br />" + data.sp[i].categoria +"</td>";
+        row += "<td><strong>" + data.sp[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> <br />" + data.sp[i].categoria +"</td>";
         if(data.sp[i].riesgo == "Alto (4)"){
             row += "<td>" + 1 + "</td>";
             row += "<td>" + 0 + "</td>";
@@ -278,27 +278,19 @@ $(document).ready(function() {
     });
 });
 
-// window.onload = function(){
-//     document.getElementById("btn-PDF")
-//     .addEventListener("click",()=>{
-//         const invoice = this.document.getElementById("ExportarData");
-//         console.log(invoice);
-//         console.log(window);
-//         var opt = {
-//             filename: 'Incidencia.pdf',
-//             image: { type: 'jpeg', quality: 600 },
-//             html2canvas: { scale: 3 },
-//             jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
-//             };
-//             html2pdf().from(invoice).set(opt).save();
-//     })
-// }
+window.onload = function(){
+    document.getElementById("btn-PDF")
+    .addEventListener("click",()=>{
+        const invoice = this.document.getElementById("ExportarData");
+        console.log(invoice);
+        console.log(window);
+        var opt = {
+            filename: 'Incidencia.pdf',
+             image: { type: 'jpeg', quality: 600 },
+             html2canvas: { scale: 3 },
+             jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape'}
+            };
+            html2pdf().from(invoice).set(opt).save();
+    })
+}
  
-// $("#btn-PDF").live("click", function(){
-//     var printDoc = new jsPDF();
-//     printDoc.fromHTML($('#ExportarData').get(0),10,10,{
-//         'width':180
-//     });
-//     printDoc.autoPrint();
-//     printDoc.output("Incidencia");
-// });
