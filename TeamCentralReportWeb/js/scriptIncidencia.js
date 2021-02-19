@@ -4,17 +4,30 @@ let Medio = 0;
 let Bajo = 0;
 let Debilidad = 0;
 let Incumplimiento = 0;
+let Oportunidad = 0;
 
 function TraerData() {
     var entidad = $("#selectNombre :selected").val();
     var estatus = $("input[name=radioIncidencia]:checked").val();
     $.getJSON({
-        url: 'https://localhost:44372/api/Recomendaciones/GetAllIncidencia?entidad='+entidad+
+        url: 'https://localhost:44372/api/Recomendaciones/GetAllIncidenciaVencerPorVencer?entidad='+entidad+
         '&estatus='+estatus,
         type: 'GET',
         success: function (data) {
             FillTable(data);
             console.log(data);
+            // document.getElementById('Estatus').innerHTML = estatus;
+            // document.getElementById('TituloIncidencia').innerHTML = entidad;
+        }
+    });
+
+    $.getJSON({
+        url: 'https://localhost:44372/api/Recomendaciones/GetAllIncidencia?entidad='+entidad+
+        '&estatus='+estatus,
+        type: 'GET',
+        success: function (data2) {
+            FillTable2(data2);
+            console.log(data2);
             document.getElementById('Estatus').innerHTML = estatus;
             document.getElementById('TituloIncidencia').innerHTML = entidad;
         }
@@ -28,21 +41,83 @@ function TraerDataRefresh(){
 }
 
 function FillTable(data){
-     Alto = 0;
+    
+    console.log(data);
+    for (var i = 0; i < data.sp.length; i ++){
+        var row = "<tr>";
+            row += "<td><strong>" + data.sp[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> </br>" + data.sp[i].categoria  +"</td>";
+            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].alto + "</td>";
+            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].moderado  + "</td>";
+            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].medio + "</td>";
+            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].bajo + "</td>";
+
+        row += "</tr>";
+
+        $("#tableBody").append(row);
+        
+     
+    }
+
+}
+
+function FillTable2(data2){
+    Alto = 0;
      Moderado = 0;
      Medio = 0;
      Bajo = 0;
      Debilidad = 0;
      Incumplimiento = 0;
 
-
-    document.getElementById('tableBody').innerHTML = '';
+     document.getElementById('tableBody').innerHTML = '';
     document.getElementById('tablebodySecundario').innerHTML = '';
-    console.log(data);
-    for (var i = 0; i < data.sp.length; i++){
+    for (var i = 0; i < data2.sp2.length; i++){
         var row = "<tr>";
-        row += "<td><strong>" + data.sp[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> <br />" + data.sp[i].categoria +"</td>";
-        if(data.sp[i].riesgo == "Alto (4)"){
+        row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].nombre_Proyecto + "</strong> &nbsp;&nbsp; </br>" + data2.sp2[i].titulo +"</td>";
+        row += "<td>" +data2.sp2[i].riesgo+"</td>";
+        row += "<td>" +data2.sp2[i].categoria+"</td>";
+        row += "<td>" +data2.sp2[i].nombre+"</td>";
+        row += "<td>" +data2.sp2[i].fecha_Estimada+"</td>";
+        row += "<td>" +data2.sp2[i].día_Atraso+"</td>";
+        row += "</tr>"
+
+   
+
+        $("#tablebodySecundario").append(row);
+        document.getElementById('CantidadIncidencia').innerHTML = data2.sp2.length;
+
+    }
+    
+         for (var i = 0; i < data2.sp2.length; i++){
+        var row = "<tr>";
+        row += "<td><strong>" + data2.sp2[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].proyecto + "</strong> ";
+        if(data2.sp2[i].categoria == "Debilidad de Control ( DC )"){
+            row += "<td>" + 1 + "</td>";
+            row += "<td>" + 0 + "</td>";
+            row += "<td>" + 0 + "</td>";
+            Debilidad++;
+            
+        }
+        else if(data2.sp2[i].categoria == "Incumplimiento ( I )"){
+            row += "<td>" + 0 + "</td>";
+            row += "<td>" + 1 + "</td>";
+            row += "<td>" + 0 + "</td>";
+            Incumplimiento++;
+        }
+        else if(data2.sp2[i].categoria == "Oportunidad de Mejora ( OM )"){
+            row += "<td>" + 0 + "</td>";
+            row += "<td>" + 0 + "</td>";
+            row += "<td>" + 1 + "</td>";
+            Oportunidad++;
+        }
+        $("#TableBodyHidden").append(row);
+    }
+
+    for (var i = 0; i < data2.sp2.length; i ++){
+        var row = "<tr>";
+            row += "<td><strong>" + data2.sp2[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].proyecto + "</strong> <br />" + data2.sp2[i].categoria  +"</td>";
+
+        
+        if(data2.sp2[i].riesgo == "Alto (4)"){
             row += "<td>" + 1 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
@@ -50,7 +125,7 @@ function FillTable(data){
 
             Alto++;
         }
-        else if(data.sp[i].riesgo == "Moderado (3)"){
+        else if(data2.sp2[i].riesgo == "Moderado (3)"){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 1 + "</td>";
             row += "<td>" + 0 + "</td>";
@@ -58,64 +133,31 @@ function FillTable(data){
 
             Moderado++;
         }
-        else if(data.sp[i].riesgo == "Medio (2)"){
+        else if(data2.sp2[i].riesgo == "Medio (2)"){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 1 + "</td>";
             row += "<td>" + 0 + "</td>";
 
-            Medio++;
+            Medio++; 
         }
-        else if(data.sp[i].riesgo == "Bajo (1)"){
+        else if(data2.sp2[i].riesgo == "Bajo (1)"){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 1 + "</td>";
 
-            Bajo++;
+             Bajo++;
         }
 
 
         row += "</tr>";
 
-        $("#tableBody").append(row);
-        document.getElementById('CantidadIncidencia').innerHTML = data.sp.length;
+        $("#TableBodyHidden2").append(row);
      
     }
 
-    for (var i = 0; i < data.sp.length; i++){
-        var row = "<tr>";
-        row += "<td><strong>" + data.sp[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> <br /> <br />" + data.sp[i].titulo +"</td>";
-        row += "<td>" +data.sp[i].riesgo+"</td>";
-        row += "<td>" +data.sp[i].categoria+"</td>";
-        row += "<td>" +data.sp[i].responsable+"</td>";
-        row += "<td>" +data.sp[i].fecha_Estimada+"</td>";
-        row += "<td>" +data.sp[i].atraso+"</td>";
-        row += "</tr>";
-
-        $("#tablebodySecundario").append(row);
-       
-    }
-
-    for (var i = 0; i < data.sp.length; i++){
-        var row = "<tr>";
-        row += "<td><strong>" + data.sp[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> ";
-        if(data.sp[i].categoria == "Debilidad de Control ( DC )"){
-            row += "<td>" + 1 + "</td>";
-            row += "<td>" + 0 + "</td>";
-            Debilidad++;
-            
-        }
-        else if(data.sp[i].categoria == "Incumplimiento ( I )"){
-            row += "<td>" + 0 + "</td>";
-            row += "<td>" + 1 + "</td>";
-            Incumplimiento++;
-        }
-        $("#tableBodyPrueba").append(row);
-    }
-        
-
-    myChart.data.datasets[0].data.pop();
+        myChart.data.datasets[0].data.pop();
     myChart.data.datasets[0].data.pop();
     myChart.data.datasets[0].data.pop();
     myChart.data.datasets[0].data.pop();
@@ -126,18 +168,19 @@ function FillTable(data){
     myChart.data.datasets[0].data[3] = Bajo;
 
 
-    myChart2.data.datasets[0].data.pop();
-    myChart2.data.datasets[0].data.pop();
+      myChart2.data.datasets[0].data.pop();
+      myChart2.data.datasets[0].data.pop();
+      myChart2.data.datasets[0].data.pop();
 
-    myChart2.data.datasets[0].data[0] = Debilidad;
-    myChart2.data.datasets[0].data[1] = Incumplimiento;
+      myChart2.data.datasets[0].data[0] = Debilidad;
+      myChart2.data.datasets[0].data[1] = Incumplimiento;
+      myChart2.data.datasets[0].data[2] = Oportunidad;
 
     myChart.update();
-    myChart2.update();
+     myChart2.update();
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////
 //Fecha Actual
 
     let fecha = new Date();
@@ -172,7 +215,7 @@ function FillTable(data){
 
   
 
-////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////
 
 var ctx = document.getElementById('myChartRiesgo').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -215,17 +258,19 @@ var ctx = document.getElementById('myChartIncidencia').getContext('2d');
 var myChart2 = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Debilidad de Control (DB)', 'Incumplimiento (I)'],
+        labels: ['(DB)', '(I)','( OM )'],
         datasets: [{
             label: 'Categoria',
-            data: [Debilidad,Incumplimiento],
+            data: [Debilidad,Incumplimiento,Oportunidad],
             backgroundColor: [
                 'red',
                 'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
             ],
             borderColor: [
                 'red',
                 'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
             ],
             borderWidth: 1
         }]
@@ -243,7 +288,7 @@ var myChart2 = new Chart(ctx, {
 
 
 
-///////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////
 //PDF Excel
 $(document).ready(function() {
     $("#btn-Excel").click(function(e) {
@@ -278,6 +323,9 @@ $(document).ready(function() {
     });
 });
 
+
+
+
 window.onload = function(){
     document.getElementById("btn-PDF")
     .addEventListener("click",()=>{
@@ -286,11 +334,21 @@ window.onload = function(){
         console.log(window);
         var opt = {
             filename: 'Incidencia.pdf',
-             image: { type: 'jpeg', quality: 600 },
-             html2canvas: { scale: 3 },
-             jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape'}
+             image: { type: 'PNG'},
+             html2canvas: { scale: 2 },
+             jsPDF: { unit: 'pt', format: 'a4', orientation: 'l'}
             };
             html2pdf().from(invoice).set(opt).save();
     })
 }
- 
+
+// function HTMLtoPDF(){
+//     var doc = new jsPDF()
+
+//     var HTMLElement = $("#ExportarData").html()
+//     doc.fromHTML(HTMLElement,10,10,{
+//         'width':190
+        
+//     })
+//     doc.save('Incidencia.pdf')
+// }

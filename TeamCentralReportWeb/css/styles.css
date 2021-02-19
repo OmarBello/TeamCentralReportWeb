@@ -283,15 +283,14 @@ nav ul li a:hover{
     font-weight: bold;
 }
 
-
 .tablaIncidencia{
-    page-break-inside: auto;
-    page-break-inside: avoid;
-    page-break-after: auto;
-
+    
+    page-break-after: always;
+}   
+.tablaincidencia2{
+    margin-top: 164px;
+    page-break-after:always;
 }
-
-
 
 
 .Esconder{
