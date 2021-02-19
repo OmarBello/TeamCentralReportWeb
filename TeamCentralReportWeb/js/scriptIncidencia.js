@@ -227,15 +227,15 @@ var myChart = new Chart(ctx, {
             data: [Alto, Moderado, Medio, Bajo],
             backgroundColor: [
                 'red',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
+                '#FF4500',
+                '#FFFF00',
+                '#2E8B57'
             ],
             borderColor: [
                 'red',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
+                '#FF4500',
+                '#FFFF00',
+                '#2E8B57'
             ],
             borderWidth: 1
         }]
@@ -263,14 +263,14 @@ var myChart2 = new Chart(ctx, {
             label: 'Categoria',
             data: [Debilidad,Incumplimiento,Oportunidad],
             backgroundColor: [
-                'red',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
+                '#FF4500',
+                '#FF0000',
+                '#2E8B57'
             ],
             borderColor: [
-                'red',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
+                '#FF4500',
+                '#FF0000',
+                '#2E8B57'
             ],
             borderWidth: 1
         }]
@@ -326,21 +326,21 @@ $(document).ready(function() {
 
 
 
-window.onload = function(){
-    document.getElementById("btn-PDF")
-    .addEventListener("click",()=>{
-        const invoice = this.document.getElementById("ExportarData");
-        console.log(invoice);
-        console.log(window);
-        var opt = {
-            filename: 'Incidencia.pdf',
-             image: { type: 'PNG'},
-             html2canvas: { scale: 2 },
-             jsPDF: { unit: 'pt', format: 'a4', orientation: 'l'}
-            };
-            html2pdf().from(invoice).set(opt).save();
-    })
-}
+// window.onload = function(){
+//     document.getElementById("btn-PDF")
+//     .addEventListener("click",()=>{
+//         const invoice = this.document.getElementById("ExportarData");
+//         console.log(invoice);
+//         console.log(window);
+//         var opt = {
+//             filename: 'Incidencia.pdf',
+//              image: { type: 'PNG'},
+//              html2canvas: { scale: 2 },
+//              jsPDF: { unit: 'in', format: 'a4', orientation: 'l'}
+//             };
+//             html2pdf().from(invoice).set(opt).save();
+//     })
+// }
 
 // function HTMLtoPDF(){
 //     var doc = new jsPDF()
@@ -352,3 +352,27 @@ window.onload = function(){
 //     })
 //     doc.save('Incidencia.pdf')
 // }
+
+
+
+$('#btn-PDF').click(function(){
+      $('#ExportarData').printThis({
+          debug: false,
+          importCSS: true,
+          importStyle: false,
+          loadCSS:"http://127.0.0.1:5500/Incidencias.html/styles.css",
+          //array []
+          pageTitle: "",
+          removeInline: false,
+          printDelay: 333,
+          header: null,
+          footer: null,
+          formValues: true,
+          canvas: true,
+          base: false,
+          doctypeStrings: '<!DOCTYPE html>',
+          removeScripts: false,
+          copyTagClasses: false,
+      });
+});
+

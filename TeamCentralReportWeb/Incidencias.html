@@ -11,11 +11,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
     <link rel="shortcut icon" href="img/Image_2@2x.png">
-
 </head>
 <!--El Index.html guarda la informacion de las Recomendaciones Pendientes-->
 
-<body>
+<body id="body">
     <header>
         <img src="img/logoBHD.png" alt="Logo BHD" class="logo">
         <div>
@@ -90,11 +89,12 @@
     </section >
 
     <div class="btn-exportdata">
-        <button id="btn-PDF" class="btn btn-outline-danger btn-succes" type="submit">PDF</button>
+        <button onclick="window.print();" class="btn btn-outline-danger btn-succes" type="submit">PDF</button>
         <button id="btn-Excel" class="btn btn-outline-success btn-succes" type="submit">Excel</button>
     </div>
 
-    <section id="ExportarData" class="tablaIncidencia">
+    <section id="ExportarData">
+        <img src="img/logoBHD.png" alt="" class="tituloIncidencia">
         <div>
 
             <div class="FechaActual">
@@ -109,6 +109,7 @@
         
 
         <div class="TituloPricipalIncidencia">
+            
 
             <p class="tituloIncidencia">Reporte Recomendaciones</p>
             <p id="Estatus" class="estatusMover"></p>
@@ -122,8 +123,9 @@
 
         <div>
             <p class="cantidadIncidencia">Total Recomendaciones: <span id="CantidadIncidencia"></span></p>
-
+            
         </div>
+        <hr>
 
         <div class="Mover-chart">
             <div class="wrapper">
@@ -148,6 +150,8 @@
                 </div>
             </div>
         </div>    
+
+        
        
             <table class="table table-hover" id="table-principal">
                 <thead>
@@ -161,11 +165,160 @@
                 </thead >
     
                 <tbody id="tableBody">
+                    <tr>
+                        <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
                 </tbody>
             </table>
-    
-             <table id="table-secundario" class="table table-hover tablaincidencia2">
+
+             <table id="table-secundario" class="table table-hover tablaIncidencia">
+               
                 <thead>
+                    <hr class="linea">
                     <tr>
                         <th>Nombre Proyecto <br />
                             <spam>Tipo de Recomendaciones</spam>
@@ -179,11 +332,158 @@
                 </thead>
     
                 <tbody id="tablebodySecundario">
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
+                    <tr>
+                       <td>Blablablablabla Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque maiores ducimus, voluptatem cum dolorum beatae earum optio laboriosam voluptates sint repellat debitis sed vitae inventore mollitia nobis, nemo at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur dolorem, amet repudiandae error doloremque facere alias deserunt similique, ea asperiores voluptatem fugit. Inventore minus tempora, eaque sit quia odio?</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                        <td>Blablablablabla</td>
+                    </tr>
                 </tbody>
-            </table> 
-    
-       
-    </section>
+                
+            </table>   
+        </section>
+ 
 
      
   
@@ -222,18 +522,13 @@
 
 
     <script src="js/jquery-3.5.1.min.js"></script>
-    <scritp src="js/jquery-3.5.1.js">
-        </script>
-        <script src="js/html2pdf.bundle.js"></script> 
-         <script src="js/jspdf.min.js"></script>
-    
-         <!-- <script src="js/jspdf.debug.js"></script> -->
+    <scritp src="js/jquery-3.5.1.js"></script>
         <script src="js/Chart.min.js"></script>
 
-
+      
 
         <script src="js/scriptIncidencia.js"></script>
-
+       
 </body>
 
 </html>

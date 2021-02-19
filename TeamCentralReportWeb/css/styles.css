@@ -225,7 +225,7 @@ nav ul li a:hover{
 .FechaActual {
     float: right;
     margin-bottom: 60px;
-    margin-right: 80px;
+    margin-right: 136px;
     font-weight: bold;
 }
 
@@ -236,12 +236,12 @@ nav ul li a:hover{
 }
 
 .tituloIncidencia {
-    margin-left: 201px;
+    margin-left: 47px;
     font-weight: bold;
 }
 
 .estatusMover {
-    margin: -40px -8px 16px 405px;
+    margin: -40px -8px 16px 249px;
 }
 
 .tituloIncidencia2 {
@@ -250,7 +250,7 @@ nav ul li a:hover{
 }
 
 .cantidadIncidencia {
-    margin-left: 778px;
+    margin-left: 739px;
     margin-bottom: 40px;
     font-weight: bold;
 }
@@ -258,7 +258,7 @@ nav ul li a:hover{
 .Mover-chart {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 8px;
     margin-bottom: -252px;
 }
 
@@ -285,15 +285,36 @@ nav ul li a:hover{
 
 .tablaIncidencia{
     
-    page-break-after: always;
+    margin-top: 70px;
 }   
-.tablaincidencia2{
+/* .tablaincidencia2{
     margin-top: 164px;
     page-break-after:always;
-}
+} */
 
 
 .Esconder{
     visibility: hidden;
 }
 
+@media print {
+    body *{
+        visibility: hidden;
+    }
+    #ExportarData, #ExportarData *{
+        visibility: visible;
+    }
+    #ExportarData{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        
+    }
+    @page {size: A4 landscape!important}
+} 
+
+  .linea{
+      margin-top: 70px;
+  }
+
+  
