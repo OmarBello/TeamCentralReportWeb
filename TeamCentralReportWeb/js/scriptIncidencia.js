@@ -47,8 +47,8 @@ function FillTable(data){
         var row = "<tr>";
             row += "<td><strong>" + data.sp[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> </br>" + data.sp[i].categoria  +"</td>";
             row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].alto + "</td>";
-            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].moderado  + "</td>";
-            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].medio + "</td>";
+            row += "<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + data.sp[i].moderado  + "</td>";
+            row += "<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + data.sp[i].medio + "</td>";
             row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].bajo + "</td>";
 
         row += "</tr>";
@@ -70,6 +70,13 @@ function FillTable2(data2){
 
      document.getElementById('tableBody').innerHTML = '';
     document.getElementById('tablebodySecundario').innerHTML = '';
+    document.getElementById('CantidadAlto').innerHTML = '';
+    document.getElementById('CantidadModerado').innerHTML = '';
+    document.getElementById('CantidadMedio').innerHTML = '';
+    document.getElementById('CantidadBajo').innerHTML = '';
+    document.getElementById('CantidadDB').innerHTML = '';
+    document.getElementById('CantidadI').innerHTML = '';
+    document.getElementById('CantidadOM').innerHTML = '';
     for (var i = 0; i < data2.sp2.length; i++){
         var row = "<tr>";
         row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].nombre_Proyecto + "</strong> &nbsp;&nbsp; </br>" + data2.sp2[i].titulo +"</td>";
@@ -95,6 +102,7 @@ function FillTable2(data2){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             Debilidad++;
+            document.getElementById('CantidadDB').innerHTML =  Debilidad;
             
         }
         else if(data2.sp2[i].categoria == "Incumplimiento ( I )"){
@@ -102,12 +110,14 @@ function FillTable2(data2){
             row += "<td>" + 1 + "</td>";
             row += "<td>" + 0 + "</td>";
             Incumplimiento++;
+            document.getElementById('CantidadI').innerHTML = Incumplimiento;
         }
         else if(data2.sp2[i].categoria == "Oportunidad de Mejora ( OM )"){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 1 + "</td>";
             Oportunidad++;
+            document.getElementById('CantidadOM').innerHTML = Oportunidad;
         }
         $("#TableBodyHidden").append(row);
     }
@@ -123,7 +133,8 @@ function FillTable2(data2){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
 
-            Alto++;
+             Alto++;
+             document.getElementById('CantidadAlto').innerHTML = Alto;
         }
         else if(data2.sp2[i].riesgo == "Moderado (3)"){
             row += "<td>" + 0 + "</td>";
@@ -131,7 +142,8 @@ function FillTable2(data2){
             row += "<td>" + 0 + "</td>";
             row += "<td>" + 0 + "</td>";
 
-            Moderado++;
+           Moderado++;
+           document.getElementById('CantidadModerado').innerHTML = Moderado;
         }
         else if(data2.sp2[i].riesgo == "Medio (2)"){
             row += "<td>" + 0 + "</td>";
@@ -140,6 +152,7 @@ function FillTable2(data2){
             row += "<td>" + 0 + "</td>";
 
             Medio++; 
+            document.getElementById('CantidadMedio').innerHTML = Medio;
         }
         else if(data2.sp2[i].riesgo == "Bajo (1)"){
             row += "<td>" + 0 + "</td>";
@@ -148,6 +161,7 @@ function FillTable2(data2){
             row += "<td>" + 1 + "</td>";
 
              Bajo++;
+             document.getElementById('CantidadBajo').innerHTML = Bajo;
         }
 
 
@@ -157,7 +171,7 @@ function FillTable2(data2){
      
     }
 
-        myChart.data.datasets[0].data.pop();
+    myChart.data.datasets[0].data.pop();
     myChart.data.datasets[0].data.pop();
     myChart.data.datasets[0].data.pop();
     myChart.data.datasets[0].data.pop();
@@ -219,7 +233,7 @@ function FillTable2(data2){
 
 var ctx = document.getElementById('myChartRiesgo').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'pie',
     data: {
         labels: ['Alto', 'Moderado', 'Medio', 'Bajo'],
         datasets: [{
@@ -256,7 +270,7 @@ var myChart = new Chart(ctx, {
 
 var ctx = document.getElementById('myChartIncidencia').getContext('2d');
 var myChart2 = new Chart(ctx, {
-    type: 'bar',
+    type: 'pie',
     data: {
         labels: ['(DB)', '(I)','( OM )'],
         datasets: [{
