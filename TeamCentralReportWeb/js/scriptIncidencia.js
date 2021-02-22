@@ -240,16 +240,16 @@ var myChart = new Chart(ctx, {
             label: 'Riesgo',
             data: [Alto, Moderado, Medio, Bajo],
             backgroundColor: [
-                'red',
-                '#FF4500',
-                '#FFFF00',
-                '#2E8B57'
+                '#ff5f52',
+                '#ffb04c',
+                '#ffff5a',
+                '#9cff57'
             ],
             borderColor: [
-                'red',
-                '#FF4500',
-                '#FFFF00',
-                '#2E8B57'
+                '#ff5f52',
+                '#ffb04c',
+                '#ffff5a',
+                '#9cff57'
             ],
             borderWidth: 1
         }]
@@ -277,14 +277,14 @@ var myChart2 = new Chart(ctx, {
             label: 'Categoria',
             data: [Debilidad,Incumplimiento,Oportunidad],
             backgroundColor: [
-                '#FF4500',
-                '#FF0000',
-                '#2E8B57'
+                '#ffb04c',
+                '#ff5f52',
+                '#9cff57'
             ],
             borderColor: [
-                '#FF4500',
-                '#FF0000',
-                '#2E8B57'
+                '#ffb04c',
+                '#ff5f52',
+                '#9cff57'
             ],
             borderWidth: 1
         }]
