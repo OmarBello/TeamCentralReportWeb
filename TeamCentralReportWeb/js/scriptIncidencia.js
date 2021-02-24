@@ -81,7 +81,7 @@ function FillTable2(data2){
         var row = "<tr>";
         row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].nombre_Proyecto + "</strong> &nbsp;&nbsp; </br>" + data2.sp2[i].titulo +"</td>";
         row += "<td>" +data2.sp2[i].riesgo+"</td>";
-        row += "<td>" +data2.sp2[i].categoria+"</td>";
+        row += "<td>" +data2.sp2[i].categoria2+"</td>";
         row += "<td>" +data2.sp2[i].nombre+"</td>";
         row += "<td>" +data2.sp2[i].fecha_Estimada+"</td>";
         row += "<td>" +data2.sp2[i].día_Atraso+"</td>";
