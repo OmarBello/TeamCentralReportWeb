@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $.getJSON("https://localhost:44372/api/Recomendaciones/Detenidas",function(data) {
+    $.getJSON("https://172.17.50.98:443/api/Recomendaciones/Detenidas",function(data) {
         console.log(data);
         var items = [];
         for (var i = 0; i < data.sp.length; i++) {
