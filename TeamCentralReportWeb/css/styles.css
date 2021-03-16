@@ -141,8 +141,8 @@ nav ul li a:hover{
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 80px;
+    margin-top: 0px;
+    margin-bottom: -18px;
 }
 
 .button {
@@ -155,7 +155,7 @@ nav ul li a:hover{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 100px 2px;
+    margin: 7px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 20px;
