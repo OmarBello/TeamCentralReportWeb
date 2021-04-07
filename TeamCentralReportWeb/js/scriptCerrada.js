@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $.getJSON("https://localhost:44372/api/Recomendaciones/Cerradas",function(data) {
+    $.getJSON("http://172.17.50.98:444/api/Recomendaciones/Cerradas",function(data) {
         console.log(data);
         var items = [];
         for (var i = 0; i < data.sp.length; i++) {

@@ -10,7 +10,7 @@ function TraerData() {
     var entidad = $("#selectNombre :selected").val();
     var estatus = $("input[name=radioIncidencia]:checked").val();
     $.getJSON({
-        url: 'https://localhost:44372/api/Recomendaciones/GetAllIncidenciaVencerPorVencer?entidad='+entidad+
+        url: 'http://172.17.50.98:444/api/Recomendaciones/GetAllIncidenciaVencerPorVencer?entidad='+entidad+
         '&estatus='+estatus,
         type: 'GET',
         success: function (data) {
@@ -22,7 +22,7 @@ function TraerData() {
     });
 
     $.getJSON({
-        url: 'https://localhost:44372/api/Recomendaciones/GetAllIncidencia?entidad='+entidad+
+        url: 'http://172.17.50.98:444/api/Recomendaciones/GetAllIncidencia?entidad='+entidad+
         '&estatus='+estatus,
         type: 'GET',
         success: function (data2) {
