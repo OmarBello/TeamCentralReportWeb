@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $.getJSON("http://172.17.50.98:444/api/Recomendaciones/Implementadas",function(data) {
+    $.getJSON("https://172.17.50.98/api/Recomendaciones/Implementadas",function(data) {
         console.log(data);
         var items = [];
         for (var i = 0; i < data.sp.length; i++) {

@@ -25,8 +25,8 @@
                     <li><a class=" " href="Implementadas.html">Implementadas</a></li>
                     <li><a class=" " href="Cerradas.html">Cerradas</a></li>
                     <li><a class="" href="Detalle.html">Detalle Recomendaciones</a></li>
-                    <li><a class="current" href="Incidencias.html">IncidenciasVencida</a></li>
-                    <li><a class="" href="IncidenciasPorVencer.html">IncidenciasPorVencer</a></li>
+                    <li><a class="" href="incidencias.html">IncidenciasVencida</a></li>
+                    <li><a class="current" href="IncidenciasPorVencer.html">IncidenciasPorVencer</a></li>
                 </ul>
             </nav>
         </div>
@@ -67,21 +67,21 @@
             </select>
 
             <div class="incidenciasopciones">
-                <div class="form-check">
+                <!-- <div class="form-check">
                     <input type="radio" name="radioIncidencia" class="form-check-input" value="Vencida" />
                     <label for="radioIncidencia" class="form-check-label">
                         Vencida
                     </label>
 
-                </div>
+                </div> -->
 
-                <!-- <div class="form-check">
+                <div class="form-check">
                     <input type="radio" name="radioIncidencia" class="form-check-input" value="Por Vencer" />
                     <label for="radioIncidencia" class="form-check-label">
 
                         Por Vencer
                     </label>
-                </div> -->
+                </div>
 
                 <div class="moverBtn">
                     <button id="btn-visualizar" class="btn btn-outline-success btn-succes" type="submit" onclick="TraerData();">Visualizar</button>
@@ -204,7 +204,6 @@
                         <th>Categoría</th>
                         <th>Responsable</th>
                         <th>Fecha Imp.</th>
-                        <th>Día de Atraso</th>
                     </tr>
                 </thead>
     
@@ -261,7 +260,7 @@
 
       
 
-        <script src="js/scriptIncidencia.js"></script>
+        <script src="js/scriptIncidenciaPorVencer.js"></script>
        
 </body>
 

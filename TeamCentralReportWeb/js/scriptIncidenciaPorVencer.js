@@ -9,7 +9,7 @@ let Oportunidad = 0;
 function TraerData() {
     var entidad = $("#selectNombre :selected").val();
     // var estatus = $("input[name=radioIncidencia]:checked").val();
-    var estatus = 'Vencida'
+    var estatus = 'Por Vencer'
     $.getJSON({
         url: 'https://172.17.50.98/api/Recomendaciones/GetAllIncidenciaVencerPorVencer?entidad='+entidad+
         '&estatus='+estatus,
@@ -89,7 +89,6 @@ function FillTable2(data2){
         row += "<td>" +data2.sp2[i].categoria2+"</td>";
         row += "<td>" +data2.sp2[i].nombre+"</td>";
         row += "<td>" +data2.sp2[i].fecha_Estimada+"</td>";
-        row += "<td>" +data2.sp2[i].día_Atraso+"</td>";
         row += "</tr>"
 
    

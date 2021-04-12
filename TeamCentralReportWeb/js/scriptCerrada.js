@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $.getJSON("http://172.17.50.98:444/api/Recomendaciones/Cerradas",function(data) {
+    $.getJSON("https://172.17.50.98/api/Recomendaciones/Cerradas",function(data) {
         console.log(data);
         var items = [];
         for (var i = 0; i < data.sp.length; i++) {
@@ -17,6 +17,9 @@ $(document).ready(function() {
             employee_data += '<td>' + value.coordinador + '</td>';
             employee_data += '<td>' + value.responsable + '</td>';
             employee_data += '<td>' + value.entidad + '</td>';
+            employee_data += '<td>' + value.fecha_Implementacion + '</td>';
+            employee_data += '<td>' + value.fecha_Cierre + '</td>';
+            employee_data += '<td>' + value.atraso + '</td>';
             employee_data += '<td>' + value.fecha_Envio + '</td>';
             employee_data += '</tr>';
 
