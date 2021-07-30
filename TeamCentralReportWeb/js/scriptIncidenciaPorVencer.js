@@ -29,7 +29,7 @@ function TraerData() {
         success: function (data2) {
             FillTable2(data2);
             console.log(data2);
-            document.getElementById('Estatus').innerHTML = estatus;
+            //document.getElementById('Estatus').innerHTML = estatus;
             document.getElementById('TituloIncidencia').innerHTML = entidad;
         }
     });
@@ -430,7 +430,7 @@ var ctx = document.getElementById('myChartIncidencia').getContext('2d');
 var myChart2 = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['(DB)', '(I)','( OM )'],
+        labels: ['(DC)', '(I)','( OM )'],
         datasets: [{
             label: 'Categoria',
             data: [Debilidad,Incumplimiento,Oportunidad],
