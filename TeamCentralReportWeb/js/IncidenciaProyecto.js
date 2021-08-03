@@ -5,32 +5,19 @@ let Bajo = 0;
 let Debilidad = 0;
 let Incumplimiento = 0;
 let Oportunidad = 0;
+let CodigoProyecto = '';
 
 function TraerData() {
-    var entidad = $("#selectNombre :selected").val();
-    // var estatus = $("input[name=radioIncidencia]:checked").val();
-    var estatus = 'Vencida'
-    $.getJSON({
-        url: 'https://172.17.50.98:8080/api/Recomendaciones/GetAllIncidenciaVencerPorVencer?entidad='+entidad+
-        '&estatus='+estatus,
-        type: 'GET',
-        success: function (data) {
-            FillTable(data);
-            console.log(data);
-            // document.getElementById('Estatus').innerHTML = estatus;
-            // document.getElementById('TituloIncidencia').innerHTML = entidad;
-        }
-    });
+    var projecto = $("#selectNombre :selected").val();
 
     $.getJSON({
-        url: 'https://172.17.50.98:8080/api/Recomendaciones/GetAllIncidencia?entidad='+entidad+
-        '&estatus='+estatus,
+        url: 'https://172.17.50.98:8080/api/Recomendaciones/GetAllProject?projecto='+projecto,
         type: 'GET',
         success: function (data2) {
             FillTable2(data2);
             console.log(data2);
             //document.getElementById('Estatus').innerHTML = estatus;
-            document.getElementById('TituloIncidencia').innerHTML = entidad;
+            document.getElementById('TituloIncidencia').innerHTML = projecto;
         }
     });
 
@@ -42,25 +29,6 @@ function TraerDataRefresh(){
     location.reload();
 }
 
-function FillTable(data){
-    
-    console.log(data);
-    for (var i = 0; i < data.sp.length; i ++){
-        var row = "<tr>";
-            row += "<td><strong>" + data.sp[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data.sp[i].proyecto + "</strong> </br>" + data.sp[i].categoria  +"</td>";
-            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].alto + "</td>";
-            row += "<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + data.sp[i].moderado  + "</td>";
-            row += "<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + data.sp[i].medio + "</td>";
-            row += "<td> &nbsp;&nbsp;&nbsp;" + data.sp[i].bajo + "</td>";
-
-        row += "</tr>";
-
-        $("#tableBody").append(row);
-        
-     
-    }
-
-}
 
 function FillTable2(data2){
 
@@ -71,7 +39,7 @@ function FillTable2(data2){
     Debilidad = 0;
     Incumplimiento = 0;
 
-    document.getElementById('tableBody').innerHTML = '';
+   //document.getElementById('tableBody').innerHTML = '';
    document.getElementById('tablebodySecundario').innerHTML = '';
    document.getElementById('CantidadAlto').innerHTML = '';
    document.getElementById('CantidadModerado').innerHTML = '';
@@ -84,19 +52,17 @@ function FillTable2(data2){
 
     for (var i = 0; i < data2.sp2.length; i++){
         var row = "<tr>";
-        row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].nombre_Proyecto + "</strong> &nbsp;&nbsp; </br>" + data2.sp2[i].titulo +"</td>";
         row += "<td>" +data2.sp2[i].riesgo+"</td>";
-        row += "<td>" +data2.sp2[i].categoria2+"</td>";
+        row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ "</strong> &nbsp;&nbsp; </br>" + data2.sp2[i].titulo +"</td>";
         row += "<td>" +data2.sp2[i].responsable+"</td>";
         row += "<td>" +data2.sp2[i].fecha_Estimada+"</td>";
-        row += "<td>" +data2.sp2[i].día_Atraso+"</td>";
         row += "</tr>"
 
    
 
         $("#tablebodySecundario").append(row);
         document.getElementById('CantidadIncidencia').innerHTML = data2.sp2.length;
-        
+        document.getElementById('CodigoProyecto').innerHTML = data2.sp2[i].projectcode;
     
     }
 

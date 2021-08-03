@@ -1,71 +1,6 @@
-// $(document).ready(function() {
-//     $.getJSON("https://172.17.50.98:443/api/Recomendaciones/Pendiente", function(data) {
 
-//                  console.log(data);
-//                 var items = [];
-//                 for (var i = 0; i < data.length; i++) {
-//                     items.push(data[i]);
-//                 }
-//                 var employee_data = '';
-//                 $.each(items, function(key, value) {
-//                     employee_data += '<tr>';
-//                     employee_data += '<td>' + value.codigo + '</td>';
-//                     employee_data += '<td>' + value.proyecto + '</td>';
-//                     employee_data += '<td>' + value.titulo + '</td>';
-//                     employee_data += '</tr>';
-        
-        
-//                 });
-//                 $('#contenido').append(employee_data);
-        
-//     });
-// });
-
-// const $btnExportar = document.querySelector("#btnExportarPendiente"),
-//     $tabla = document.querySelector("#contenido");
-
-// $btnExportar.addEventListener("click", function() {
-//     let tableExport = new TableExport($tabla, {
-//         exportButtons: false, // No queremos botones
-//         filename: "TeamMate Pendiente", //Nombre del archivo de Excel
-//         sheetname: "TeamMate Pendiente", //Título de la hoja
-//     });
-//     let datos = tableExport.getExportData();
-//     let preferenciasDocumento = datos.tabla.xlsx;
-//     tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
-// });
-
-// $.getJSON("https://jsonplaceholder.typicode.com/comments",function(data) {
-//         console.log(data);
-//         var items = [];
-//         for (var i = 0; i < data.length; i++) {
-//             items.push(data[i]);
-//         }
-//         var employee_data = '';
-//         $.each(items, function(key, value) {
-//             employee_data += '<tr>';
-//             employee_data += '<td>' + value.id + '</td>';
-//             employee_data += '<td>' + value.name + '</td>';
-//             employee_data += '<td>' + value.email + '</td>';
-//             employee_data += '<td>' + value.body + '</td>';
-//             employee_data += '<td>' + value.body + '</td>';
-//             employee_data += '<td>' + value.id + '</td>';
-//             employee_data += '<td>' + value.name + '</td>';
-//             employee_data += '<td>' + value.email + '</td>';
-//             employee_data += '<td>' + value.body + '</td>';
-//             employee_data += '<td>' + value.body + '</td>';
-//             employee_data += '<td>' + value.id + '</td>';
-//             employee_data += '<td>' + value.name + '</td>';
-//             employee_data += '<td>' + value.email + '</td>';
-//             employee_data += '<td>' + value.body + '</td>';
-//                     });
-//         $('#contenido').append(employee_data);
-
-//     });
-
-// Backup
 $(document).ready(function() {
-    $.getJSON("https://172.17.50.98/api/Recomendaciones/Pendiente",function(data) {
+    $.getJSON("https://172.17.50.98:8080/api/Recomendaciones/Pendiente",function(data) {
         console.log(data);
         var items = [];
         for (var i = 0; i < data.sp.length; i++) {
@@ -97,13 +32,7 @@ $(document).ready(function() {
     });
 
 });
-// $("#btnExport").click(function(e) {
 
-//     window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').innerHTML()));
-
-//     e.preventDefault();
-
-// });
 
 
 $(document).ready(function() {
@@ -138,43 +67,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 });
-// $(document).ready(function() {
-//     $.ajax({
-//         url: 'https://172.17.50.98:443/api/Recomendaciones/Pendiente',
-//         type: "get",
-//         dataType: "json",
 
-//         success: function(data) {
-//             var json = data;
-//             drawTable(json);
-//             console.log(json)
-//         }
-//     });
-//     function drawTable(data) {
-//         for (var i = 0; i < data.length; i++) {
-//             drawRow(data[i]);
-//         }
-//     }
-
-//     function drawRow(rowData) {
-//         var row = $("<tr>")
-//         row.append($("<td>" + rowData.codigo + "</td>"));
-//         row.append($("<td>" + rowData.proyecto + "</td>"));
-//         $("#contenido").append(row);
-//     }
-
-// });
-
-// var btnContainer = document.getElementById("menu-toogle");
-// var btns = btnContainer.getElementsByClassName("btn");
-
-// for(var i = 0; i < btns.length; i++){
-//     btns[i].addEventListener("click", function(){
-//         var current = document.getElementsByClassName("active");
-//         current[0].className = current[0].className.replace("active","");
-//         this.className += " activo";
-//     });
-// }
 
 $('.navmenu').on('click','li',function(){
     $('.navmenu li.active').removeClass('active');

@@ -11,7 +11,7 @@ function TraerData() {
     // var estatus = $("input[name=radioIncidencia]:checked").val();
     var estatus = 'Por Vencer'
     $.getJSON({
-        url: 'https://172.17.50.98/api/Recomendaciones/GetAllIncidenciaVencerPorVencer?entidad='+entidad+
+        url: 'https://172.17.50.98:8080/api/Recomendaciones/GetAllIncidenciaVencerPorVencer?entidad='+entidad+
         '&estatus='+estatus,
         type: 'GET',
         success: function (data) {
@@ -23,7 +23,7 @@ function TraerData() {
     });
 
     $.getJSON({
-        url: 'https://172.17.50.98/api/Recomendaciones/GetAllIncidencia?entidad='+entidad+
+        url: 'https://172.17.50.98:8080/api/Recomendaciones/GetAllIncidencia?entidad='+entidad+
         '&estatus='+estatus,
         type: 'GET',
         success: function (data2) {
@@ -87,7 +87,7 @@ function FillTable2(data2){
         row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].nombre_Proyecto + "</strong> &nbsp;&nbsp; </br>" + data2.sp2[i].titulo +"</td>";
         row += "<td>" +data2.sp2[i].riesgo+"</td>";
         row += "<td>" +data2.sp2[i].categoria2+"</td>";
-        row += "<td>" +data2.sp2[i].nombre+"</td>";
+        row += "<td>" +data2.sp2[i].responsable+"</td>";
         row += "<td>" +data2.sp2[i].fecha_Estimada+"</td>";
         row += "</tr>"
 
@@ -106,7 +106,7 @@ function FillTable2(data2){
    
         for (var i = 0; i < data2.sp2.length; i++){
        var row = "<tr>";
-       row += "<td><strong>" + data2.sp2[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].proyecto + "</strong> ";
+       row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].nombre_Proyecto + "</strong> ";
        if(data2.sp2[i].categoria == "Debilidad de Control ( DC )"){
            row += "<td>" + 1 + "</td>";
            row += "<td>" + 0 + "</td>";
@@ -134,7 +134,7 @@ function FillTable2(data2){
 
    for (var i = 0; i < data2.sp2.length; i ++){
        var row = "<tr>";
-           row += "<td><strong>" + data2.sp2[i].codigo +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].proyecto + "</strong> <br />" + data2.sp2[i].categoria  +"</td>";
+           row += "<td><strong>" + data2.sp2[i].projectcode +"</strong> &nbsp;&nbsp;&nbsp; <strong>"+ data2.sp2[i].nombre_Proyecto + "</strong> <br />" + data2.sp2[i].categoria  +"</td>";
 
        
        if(data2.sp2[i].riesgo == "Alto (4)"){

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Central</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" href="img/Image_2@2x.png">
+</head>
+<body>
+    <body id="body">
+        <header>
+            <img src="img/logoBHD.png" alt="Logo BHD" class="logo">
+            <div>
+                <nav>
+                    <ul class="nav">
+                        <li><a class="" href="index.html">Pendientes</a></li>
+                        <li><a class=" " href="Detenidas.html">Detenidas</a></li>
+                        <li><a class=" " href="Implementadas.html">Implementadas</a></li>
+                        <li><a class=" " href="Cerradas.html">Cerradas</a></li>
+                        <li><a class="" href="Incidencias.html">Planes Vencidos</a></li>
+                        <li><a class="" href="IncidenciasPorVencer.html">Planes Por Vencer</a></li>
+                        <li><a class="current" href="NombreProyecto.html">Planes Por Proyecto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+    
+        <section id="slcIncidencias" class="container">
+            <div class="incidencias">
+    
+                <div class="titulo-incidencias">
+                    <h2>Seleccione las opciones y luego click al boton Visualizar</h2>
+                </div>
+                <select id="selectNombre" name="selectNombre" class="custom-select">
+                    <option value="Activos Fijos" selected>Activos Fijos</option>
+                    <option value="Acuerdos de Pagos / Cobros">Acuerdos de Pagos / Cobros</option>
+                    <option value="Adecuación Patrimonial, Encaje Legal, Límites y Relaciones Técnicas">Adecuación Patrimonial, Encaje Legal, Límites y Relaciones Técnicas</option>
+                    <option value="Administración  Riesgo Operacional">Administración  Riesgo Operacional</option>
+                    <option value="Administración de Base de Datos">Administración de Base de Datos</option>
+                    <option value="Administración de dispositivos Móviles">Administración de dispositivos Móviles</option>
+                    <option value="Administración de Firewall / IPS">Administración de Firewall / IPS</option>
+                    <option value="Administración de la continuidad  de negocios">Administración de la continuidad  de negocios</option>
+                    <option value="Administración de las Bases de Datos">Administración de las Bases de Datos</option>
+                    <option value="Administración de Switch ATM / SmartVista">Administración de Switch ATM / SmartVista</option>
+                    <option value="Administración Riesgo de Mercado y Liquidez">Administración Riesgo de Mercado y Liquidez</option>
+                    <option value="AFI - Gestión del Cumplimiento Gobierno Corporativo">AFI - Gestión del Cumplimiento Gobierno Corporativo</option>
+                    <option value="AFI - PLAFTPADM 1er Semestre 2019">AFI - PLAFTPADM 1er Semestre 2019</option>
+                    <option value="AFI Amb. de Control y Aspectos Financieros">AFI Amb. de Control y Aspectos Financieros</option>
+                    <option value="AFP Controles Generales">AFP Controles Generales</option>
+                    <option value="afp siembra controles generales de ti">afp siembra controles generales de ti</option>
+                    <option value="Banca Corporativa y Multinacionales">Banca Corporativa y Multinacionales</option>
+                    <option value="Banca Empresas - Santo Domingo">Banca Empresas - Santo Domingo</option>
+                    <option value="Banca Hipotecaria">Banca Hipotecaria</option>
+                    <option value="Banca Hipotecaria (Titularización)">Banca Hipotecaria (Titularización)</option>
+                    <option value="Banca Instituciones Financieras y de Gobierno">Banca Instituciones Financieras y de Gobierno</option>
+                    <option value="Banca Personal (Campañas/Vehículos/Consumo)">Banca Personal (Campañas/Vehículos/Consumo)</option>
+                    <option value="Banca Personas Segmento PyME">Banca Personas Segmento PyME</option>
+                    <option value="BE- ZONA METROPOLITANA">BE- ZONA METROPOLITANA</option>
+                    <option value="BE- ZONA METROPOLITANA-SEGUIMIENTO">BE- ZONA METROPOLITANA-SEGUIMIENTO</option>
+                    <option value="BE- ZONA NORTE">BE- ZONA NORTE</option>
+                    <option value="BHDIB - Servicios Tercerizados  y Gestión Riesgos de TI">BHDIB - Servicios Tercerizados  y Gestión Riesgos de TI</option>
+                    <option value="BHDIB Captaciones del Público">BHDIB Captaciones del Público</option>
+                    <option value="BHDIB Cartera de Créditos">BHDIB Cartera de Créditos</option>
+                    <option value="BHDIB Gestión Integral de Riesgos">BHDIB Gestión Integral de Riesgos</option>
+                    <option value="BHDIB Inversiones">BHDIB Inversiones</option>
+                    <option value="BHDIB PLA/FT">BHDIB PLA/FT</option>
+                    <option value="BHDIB Riesgo Operativo">BHDIB Riesgo Operativo</option>
+                    <option value="BHDIB Tarjetas de Crédito">BHDIB Tarjetas de Crédito</option>
+                    <option value="BP-ZONA METROCENTRO">BP-ZONA METROCENTRO</option>
+                    <option value="BP-ZONA METROESTE">BP-ZONA METROESTE</option>
+                    <option value="BP-ZONA METRONORTE">BP-ZONA METRONORTE</option>
+                    <option value="BP-ZONA METROSUR">BP-ZONA METROSUR</option>
+                    <option value="BP-ZONA NORDESTE">BP-ZONA NORDESTE</option>
+                    <option value="BP-ZONA NOROESTE">BP-ZONA NOROESTE</option>
+                    <option value="BP-ZONA SANTIAGO">BP-ZONA SANTIAGO</option>
+                    <option value="Castigos de Prestamos">Castigos de Prestamos</option>
+                    <option value="Castigos de Préstamos">Castigos de Préstamos</option>
+                    <option value="Centro de Computo  (Controles físicos / ambientales) - 2019">Centro de Computo  (Controles físicos / ambientales) - 2019</option>
+                    <option value="Clasificación Cartera / Garantías y Provisiones">Clasificación Cartera / Garantías y Provisiones</option>
+                    <option value="Compraventa de Divisas">Compraventa de Divisas</option>
+                    <option value="CREDITO AMIGO-ZONA METROPOLITANA">CREDITO AMIGO-ZONA METROPOLITANA</option>
+                    <option value="Créditos Comerciales BE">Créditos Comerciales BE</option>
+                    <option value="Cuadre Operacional">Cuadre Operacional</option>
+                    <option value="Fiduciaria - Gestión del Cumplimiento Gobierno Corporativo">Fiduciaria - Gestión del Cumplimiento Gobierno Corporativo</option>
+                    <option value="Fiduciaria - PLAFTPADM">Fiduciaria - PLAFTPADM</option>
+                    <option value="Fiduciaria - PLAFTPADM 2018">Fiduciaria - PLAFTPADM 2018</option>
+                    <option value="Fiduciaria - PLAFTPADM pwc 2019">Fiduciaria - PLAFTPADM pwc 2019</option>
+                    <option value="Fiduciaria - Recomendaciones - pwc AUP PLAFTPADM">Fiduciaria - Recomendaciones - pwc AUP PLAFTPADM</option>
+                    <option value="Fiduciaria - Recomendaciones Auditoría Externa">Fiduciaria - Recomendaciones Auditoría Externa</option>
+                    <option value="Fiduciaria - Seguimiento Recomendaciones">Fiduciaria - Seguimiento Recomendaciones</option>
+                    <option value="Fiduciaria Gestión de Fideicomisos">Fiduciaria Gestión de Fideicomisos</option>
+                    <option value="Firma Digital (tarjeta de clave)">Firma Digital (tarjeta de clave)</option>
+                    <option value="Gestión de Cumplimiento Regulatorio">Gestión de Cumplimiento Regulatorio</option>
+                    <option value="Gestión de herramientas antivirus y DLP">Gestión de herramientas antivirus y DLP</option>
+                    <option value="Gestion de Riesgo de Crédito">Gestion de Riesgo de Crédito</option>
+                    <option value="Gestión del Riesgo de Crédito">Gestión del Riesgo de Crédito</option>
+                    <option value="Gobierno Corporativo Banco">Gobierno Corporativo Banco</option>
+                    <option value="Internet Banking Personal (IBP)">Internet Banking Personal (IBP)</option>
+                    <option value="Inversiones">Inversiones</option>
+                    <option value="Límites Legales, Relaciones Técnicas y Encaje Legal">Límites Legales, Relaciones Técnicas y Encaje Legal</option>
+                    <option value="Mercadeo y Publicidad">Mercadeo y Publicidad</option>
+                    <option value="Migración SAT Banco BHD LEON">Migración SAT Banco BHD LEON</option>
+                    <option value="Monitoreo de los Eventos de Seguridad">Monitoreo de los Eventos de Seguridad</option>
+                    <option value="P.B. Estructuración y Colocación de Emisión de Valores (Asesoría y Servicio al Cliente)">P.B. Estructuración y Colocación de Emisión de Valores (Asesoría y Servicio al Cliente)</option>
+                    <option value="P.B. PLAFTPADM 2do Semestre 2020">P.B. PLAFTPADM 2do Semestre 2020</option>
+                    <option value="Pin Pesos">Pin Pesos</option>
+                    <option value="Préstamos y TC Preaprobados Portal Digital">Préstamos y TC Preaprobados Portal Digital</option>
+                    <option value="Prevención de Lavado de Activos">Prevención de Lavado de Activos</option>
+                    <option value="Proceso de gestión de Identidad">Proceso de gestión de Identidad</option>
+                    <option value="Refinanciación y Reestructuración de Créditos">Refinanciación y Reestructuración de Créditos</option>
+                    <option value="Requerimientos de Seguridad SWIFT">Requerimientos de Seguridad SWIFT</option>
+                    <option value="SAFI - Gestión del Cumplimiento Gobierno Corporativo">SAFI - Gestión del Cumplimiento Gobierno Corporativo</option>
+                    <option value="SAFI - Seguimiento Recomendaciones">SAFI - Seguimiento Recomendaciones</option>
+                    <option value="Segmento PyME">Segmento PyME</option>
+                    <option value="Seguimiento Auditoria de Seguridad de Informacion">Seguimiento Auditoria de Seguridad de Informacion</option>
+                    <option value="Seguimiento Recomendaciones Auditores Externos">Seguimiento Recomendaciones Auditores Externos</option>
+                    <option value="Seguridad de los Sistemas Operativos Unix">Seguridad de los Sistemas Operativos Unix</option>
+                    <option value="Seguridad de PIN - PCI">Seguridad de PIN - PCI</option>
+                    <option value="Siembra - Gestión del Portafolio de Inversiones">Siembra - Gestión del Portafolio de Inversiones</option>
+                    <option value="Siembra - Negocios y Operaciones Afiliaciones, Traspasos, Admón. CCI">Siembra - Negocios y Operaciones Afiliaciones, Traspasos, Admón. CCI</option>
+                    <option value="Siembra Gobierno Corporativo">Siembra Gobierno Corporativo</option>
+                    <option value="Sistema de Control Interno">Sistema de Control Interno</option>
+                    <option value="Sistema de Control Interno (SCI)  4to trimestre">Sistema de Control Interno (SCI)  4to trimestre</option>
+                    <option value="Subagentes Bancarios">Subagentes Bancarios</option>
+                    <option value="SWIFT">SWIFT</option>
+                    <option value="TAAC  Vinculados (VINCULATOR)">TAAC  Vinculados (VINCULATOR)</option>
+                    <option value="TAAC Certificados Financieros">TAAC Certificados Financieros</option>
+                    <option value="TAAC Créditos (CREDITOR)">TAAC Créditos (CREDITOR)</option>
+                    <option value="TAAC de Cheques de Administración y Certificados">TAAC de Cheques de Administración y Certificados</option>
+                    <option value="TAAC de Préstamos (BYTE) y Líneas de Créditos (SISEF).">TAAC de Préstamos (BYTE) y Líneas de Créditos (SISEF).</option>
+                    <option value="TAAC Tarjetas Prepago (PREPAGATOR)">TAAC Tarjetas Prepago (PREPAGATOR)</option>
+                    <option value="TAAC Vinculados (VINCULATOR)">TAAC Vinculados (VINCULATOR)</option>
+                    <option value="TAAC Visa Debito (DEBITOR)">TAAC Visa Debito (DEBITOR)</option>
+                    <option value="Wireless Corporativo">Wireless Corporativo</option>
+                </select>
+
+                <div class="incidenciasopciones">
+                    <!-- <div class="form-check">
+                        <input type="radio" name="radioIncidencia" class="form-check-input" value="Vencida" />
+                        <label for="radioIncidencia" class="form-check-label">
+                            Vencida
+                        </label>
+    
+                    </div> -->
+    
+                    <div class="moverBtn">
+                        <button id="btn-visualizar" class="btn btn-outline-success btn-succes" type="submit" onclick="TraerData();">Visualizar</button>
+                       
+                    </div>
+                    
+                </div>
+    
+    
+        </section >
+    
+        <div class="btn-exportdata">
+            <button onclick="window.print();" class="btn btn-outline-danger btn-succes" type="submit">PDF</button>
+
+        </div>
+    
+        <section id="ExportarData">
+            <img src="img/logoBHD.png" alt="" class="logoBDH">
+            <div>
+    
+                <div class="FechaActual">
+                    <Strong>
+                        <p id="fechaDocumento"></p>
+                        <p id="horaDocumento"></p>
+                        <div id="lblTime"></div>
+                    </Strong>
+                </div>
+    
+            </div>
+            
+    
+            <div class="TituloPricipalIncidencia">
+                
+    
+                <p class="tituloIncidencia">Reporte Recomendaciones de Auditoria Vencidas</p>
+                 <p id="Estatus" class="estatusMover"></p> 
+    
+            </div>
+    
+            <div class="tituloIncidencia2">
+               <h3 id="CodigoProyecto"></h3><h3 id="TituloIncidencia"></h3>
+    
+            </div>
+    
+            <div>
+                <p class="cantidadIncidencia">Total Recomendaciones: <span id="CantidadIncidencia"></span></p>
+                
+            </div>
+           
+            <hr>
+      
+            
+                <div class="Mover-chart2">
+
+                    <div class="wrapper">
+                        <div class="positionIncidencia">
+                            <p class="MoverIncidencia">( DC ):<p id="CantidadDB" class="MoverCantidadIncidencia"></p></p>
+                            <p class="MoverIncidencia">( I ):<p id="CantidadI" class="MoverCantidadIncidencia"></p></p>
+                            <p class="MoverIncidencia">( OM ):<p id="CantidadOM" class="MoverCantidadIncidencia"></p></p>
+                        </div>
+                        <div class="Container d-flex flex-column justify-content-center align-items-center">
+                            
+                            <div class="title text-center mb-5">
+                                
+                                <h4 class="DistribucionBottom">Distribución por tipo de Observación</h4>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="myChartIncidencia"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <div class="wrapper">
+                    <div class="positionRiesgo ">
+                        <p class="MoverRiesgo">Alto:<p id="CantidadAlto" class="MoverCantidadRiesgo"></p></p>
+                        <p class="MoverRiesgo">Moderado:<p id="CantidadModerado" class="MoverCantidadRiesgo"></p></p>
+                        <p class="MoverRiesgo">Medio:<p id="CantidadMedio" class="MoverCantidadRiesgo"></p></p>
+                        <p class="MoverRiesgo">Bajo:<p id="CantidadBajo" class="MoverCantidadRiesgo"></p></p>
+                    </div>
+                    <div class="Container d-flex flex-column justify-content-center align-items-center">
+                        <div class="title text-center mb-5">
+                           
+                            <h4>Distribución por nivel de Riesgo</h4>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="myChartRiesgo"></canvas>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+                
+     
+            </div>    
+           
+              <div class="MoverTablas">
+               
+               
+                 <table  class="table table-hover tablaIncidencia">
+                   
+                    <thead>
+                        <hr class="linea">
+                        
+                        <tr id="table-secundario">
+                            <h4>Detalle de las recomendaciones Vencidas</h4>
+                            <th>Riesgo</th>
+                            <th>Codigo <br /> </th>
+                            <th>Responsable</th>
+
+                            <th>Fecha Compromiso</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody id="tablebodySecundario">
+    
+                    </tbody>
+                    
+                </table>   
+              </div>
+           
+               
+            </section>
+
+
+            <script src="js/jquery-3.5.1.min.js"></script>
+            <scritp src="js/jquery-3.5.1.js"></script>
+         <script src="js/Chart.min.js"></script>
+        
+        <script src="js/IncidenciaProyecto.js"></script>
+</body>
+</html>

@@ -358,3 +358,18 @@ nav ul li a:hover{
 .DistribucionBottom{
    margin-top: -11px;
 }
+
+.Mover-chart2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: -362px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#CodigoProyecto{
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
